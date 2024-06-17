@@ -1,0 +1,9 @@
+<main class="container-main">
+  <div>
+    <img src="/assets/images/logo.svg" alt="SPLITTER">
+  </div>
+  <section>
+    <app-form [tipForm]="tipForm"/>
+    <app-result-view [result]="result" (resetForm)="resetForm($event)"/>
+  </section>
+</main>

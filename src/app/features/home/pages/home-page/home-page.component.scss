@@ -1,0 +1,28 @@
+@import '../../../../../scss/index.scss';
+:host {
+
+  main {
+    margin-top: rem-calc(60);
+    section {
+      margin-top: rem-calc(40);
+      padding: rem-calc(30) 0;
+      background: $white;
+      border-radius: rem-calc(23);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    main section {
+      max-height: rem-calc(500);
+
+      width: rem-calc(850);
+
+      display: flex;
+      justify-content: space-around;
+
+      app-form, app-result-view{
+        width: rem-calc(350);
+      }
+    }
+  }
+}

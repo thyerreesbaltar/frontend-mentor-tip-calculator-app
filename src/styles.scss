@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import './scss/index.scss';
+
+body {
+  background-color: $lightGrayishCyan;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}

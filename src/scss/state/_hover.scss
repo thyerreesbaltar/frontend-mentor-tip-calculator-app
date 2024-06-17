@@ -1,0 +1,8 @@
+@import '../base/variables';
+
+.hover {
+  &:hover {
+    background-color: $lightGrayishCyan !important;
+    color: $veryDarkCyan !important;
+  }
+}

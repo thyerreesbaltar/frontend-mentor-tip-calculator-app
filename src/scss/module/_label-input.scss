@@ -1,0 +1,26 @@
+@import '../base/variables';
+@import '../rem-calc';
+
+.label-input {
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: rem-calc(50);
+
+  background: $veryLightGrayishCyan;
+
+  border-radius: rem-calc(10);
+  border: 2px solid transparent;
+
+  input {
+    width: 80%;
+    
+    text-align: end;
+    color: $veryDarkCyan;
+  }
+
+}

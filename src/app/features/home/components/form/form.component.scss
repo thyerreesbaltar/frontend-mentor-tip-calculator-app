@@ -1,0 +1,66 @@
+@import "../../../../../scss/base/";
+@import "../../../../../scss/rem-calc";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: rem-calc(430);
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2,
+    div h2 {
+      font-size: 16px;
+      color: $darkGrayishCyan;
+      margin: rem-calc(30) 0 rem-calc(10);
+      &:first-of-type {
+        margin: rem-calc(0) 0 rem-calc(10);
+      }
+    }
+
+    div {
+      margin: rem-calc(30) 0 rem-calc(10);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        margin: 0 !important;
+      }
+    }
+
+    .options-percentage {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+      gap: rem-calc(15);
+
+      input {
+        border-radius: rem-calc(10);
+        background: $veryLightGrayishCyan !important;
+
+        text-align: center;
+
+        width: 100%;
+        height: 100%;
+        color: $veryDarkCyan;
+
+        &::placeholder {
+          color: $darkGrayishCyan;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    form {
+      .options-percentage {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+}

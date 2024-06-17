@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+input {
+  font-size: 24px;
+  outline: none;
+  color: hsl(183, 100%, 15%);
+  background-color: transparent !important;
+
+}
+
+input,
+button,
+p,
+span,
+h2,
+strong {
+  font-family: "Space Mono", monospace;
+}
+
+// Removendo as setas de incremento e decremento (spinners) de um elemento <input> do tipo number
+input[type="number"] {
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}

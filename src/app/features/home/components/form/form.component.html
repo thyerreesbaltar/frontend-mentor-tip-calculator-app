@@ -1,0 +1,79 @@
+<form class="container-content" [formGroup]="tipForm">
+  <h2>Bill</h2>
+  <label
+    [ngClass]="{
+      'label-input': true,
+      focused: isFocusInput().bill
+    }"
+    for="bill"
+  >
+    <img src="/assets/icons/icon-dollar.svg" alt="How much to play" />
+    <input
+      id="bill"
+      type="text"
+      placeholder="0"
+      formControlName="bill"
+      (focus)="statusFocusInput($event)"
+      (blur)="statusFocusInput($event)"
+      mask="separator.2"
+      thousandSeparator=","
+      decimalMarker="."
+      required
+    />
+  </label>
+
+  <h2>Select Tip%</h2>
+  <div class="options-percentage">
+    @for (percentage of buttonOptionPercentage(); track $index) {
+    <button
+      [ngClass]="{
+        'button-percentage hover': true,
+        selected: checkPecentageSelected(percentage)
+      }"
+      (click)="setSelectTip(percentage)"
+      type="button"
+    >
+      {{ percentage }}%
+    </button>
+    }
+
+    <input
+      type="number"
+      #custom
+      (input)="setSelectTip(custom.value)"
+      [ngClass]="{ focused: isFocusInput().custom }"
+      placeholder="Custom"
+      id="custom"
+      (focus)="statusFocusInput($event)"
+      (blur)="statusFocusInput($event)"
+      maxlength="2"
+    />
+  </div>
+
+  <div>
+    <h2>Number of People</h2>
+    @if (validNumberPeople(tipForm.get('nbPeople'))) {
+    <app-error-message />
+    }
+  </div>
+
+  <label
+    for="numberpeople"
+    [ngClass]="{
+      'label-input': true,
+      focused: isFocusInput().nbPeople,
+      'border-color-error': validNumberPeople(tipForm.get('nbPeople'))
+    }"
+  >
+    <img src="/assets/icons/icon-person.svg" alt="Amount of people" />
+    <input
+      id="numberpeople"
+      type="number"
+      formControlName="nbPeople"
+      (focus)="statusFocusInput($event)"
+      (blur)="statusFocusInput($event)"
+      placeholder="0"
+      required
+    />
+  </label>
+</form>

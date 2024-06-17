@@ -1,0 +1,22 @@
+@import '../rem-calc';
+@import '../base/';
+.container-main {
+  width: rem-calc(375);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container-content {
+  width: 80%;
+}
+
+@media (min-width: 1440px){
+  .container-content {
+    width: 100%;
+    height: 100%;
+}
+}

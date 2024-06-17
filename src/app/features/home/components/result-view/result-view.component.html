@@ -1,0 +1,24 @@
+<div class="container-content">
+
+  <div class="amounts_payable">
+    <div >
+      <h3>Tip Amount</h3>
+      <span>
+        / person
+      </span>
+    </div>
+    <strong>{{ result().tip }}</strong>
+  </div>
+
+  <div class="amounts_payable">
+    <div>
+      <h3>Total</h3>
+      <span>
+        / person
+      </span>
+    </div>
+    <strong>{{ result().amount }}</strong>
+  </div>
+
+  <button class="hover" [className]="classButton" type="button" (click)="emitResetEvent()" [disabled]="checkResetIsClean()">RESET</button>
+</div>

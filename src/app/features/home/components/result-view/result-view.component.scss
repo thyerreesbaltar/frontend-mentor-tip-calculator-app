@@ -1,0 +1,84 @@
+@import '../../../../../scss/base/variables';
+@import '../../../../../scss/rem-calc';
+:host {
+  margin-top: rem-calc(20);
+
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-content {
+    max-width: rem-calc(420);
+    background-color: $veryDarkCyan;
+    border-radius: 20px;
+    padding: 30px 20px;
+
+    .amounts_payable {
+      padding: 0;
+      margin-bottom: 25px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      div {
+        h3 {
+          color: $veryLightGrayishCyan;
+          font-size: 18px;
+        }
+
+        span {
+          display: block;
+          margin-top: 6px;
+          color: $grayishCyan;
+          font-size: 12px;
+        }
+      }
+
+      strong {
+        transition: 0.5s;
+        
+        color: $strongCyan;
+        font-size: 36px;
+        word-break: break-all;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: rem-calc(46);
+
+      margin-top: rem-calc(5);
+
+      background-color: $darkGrayishCyan;
+      color: $grayishCyan;
+
+      border-radius: 5px;
+
+      font-size: 24px;
+
+      &.active {
+        background: $strongCyan;
+        color: $darkGrayishCyan;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 0;
+
+    .container-content {
+
+      padding: 30px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+
+      button {
+        margin-top: auto; //Move o button para a parte de baixo do elemento
+      }
+    }
+  }
+}
